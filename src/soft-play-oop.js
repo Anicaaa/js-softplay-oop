@@ -15,16 +15,16 @@ class SoftPlay {
 }
 
 // SoftPlay occupancy
-// Declare numAdults, numChildren
-const (numAdults, numChildren);
+// Declare numAdults, numChild
+const numberOf (numAdults, numChild);
 
 SoftPlay.occupancy()
-{ numAdults: 0, numchildren: 0}
+{ numAdults: 0, numChild: 0}
 
 //SoftPlay enter
 // Every child entering the softplay is with one adult (true). If not (false)
 SoftPlay.enter () {
-if (numAdults >= numChildren) {
+if (numAdults >= numChild) {
   return true;
 } else {
   return false;
@@ -35,6 +35,13 @@ if (numAdults >= numChildren) {
 // A child will leave with one adult (true)
 // The number of adults and children leaving the center is <= adults and children staying in the center.
 
+SoftPlay.leave () {
+  if (numAdults === 0 && numChild === 1) {
+    return false
+  } else {
+    return true
+  }
+}
 
 const softplay = new SoftPlay (1, 0);
 
