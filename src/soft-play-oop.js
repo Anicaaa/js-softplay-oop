@@ -34,20 +34,28 @@ class SoftPlay {
     if (numAdults < numChildren) {
       return false;
     } else {
-      return true;
       this.adults += numAdults;
       this.children += numChildren;
+      return true;
     }
   }
   leave(numAdults, numChildren) {
-    if (1 < 0) {
+    const adultsInsideSoftplay = this.adults - numAdults;
+    const childrenInsideSoftplay = this.children - numChildren;
+
+    if (numChildren > numAdults) {
       return false;
     }
-    if (1 === 1) {
+    if (childrenInsideSoftplay > adultsInsideSoftplay) {
+      return false;
+    }
+    if (numAdults === numChildren) {
+      return true;
+    } else {
+      this.adults -= numAdults;
+      this.children -= numChildren;
       return true;
     }
-    this.adults -= numAdults;
-    this.children -= numChildren;
   }
 }
 
