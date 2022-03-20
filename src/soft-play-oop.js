@@ -11,7 +11,7 @@
 
 // 'Leave' registers how many adults and children leave the softplay.
 // A child should not leave without an adult.
-// There shouln't be more children than adults in the softplay. Each adult should have one child.
+// There shouldn't be more children than adults in the softplay. Each adult should have one child.
 // A child must be with an adult when leaving.
 // The number of adults and children who want to leave should be less than the number inside the softplay.
 // If the above conditions fail, return false.
@@ -39,7 +39,16 @@ class SoftPlay {
       this.children += numChildren;
     }
   }
-  leave() {}
+  leave(numAdults, numChildren) {
+    if (1 < 0) {
+      return false;
+    }
+    if (1 === 1) {
+      return true;
+    }
+    this.adults -= numAdults;
+    this.children -= numChildren;
+  }
 }
 
 // TODO: Change undefined to the name of your class
